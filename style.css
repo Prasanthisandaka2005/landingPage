@@ -67,7 +67,7 @@ body {
 .doctor-img {
     width: auto;
     position: relative;
-    left: 45%;
+    right: -45%;
     height: auto;
     z-index: 2;
     border-radius: 8px;
@@ -219,7 +219,7 @@ input[type="checkbox" i] {
     }
 }
 
-h2 {
+.h2 {
     text-align: center;
     margin-bottom: 8px;
 }
@@ -236,6 +236,9 @@ h2 {
     flex-wrap: wrap;
     justify-content: center;
     margin-bottom: 2rem;
+    overflow-x: auto;
+    margin-left: 16px;
+    scroll-padding-left: 16px;
 }
 
 .treatment-card {
@@ -244,6 +247,10 @@ h2 {
     border-radius: 12px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
     background-color: #fff;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
 }
 
 .card-content {
@@ -370,13 +377,11 @@ ul {
 }
 
 .safety-card {
-    background-image: url('./assets/safety1.svg');
     width: 400px;
     background-size: cover;
     display: flex;
     align-items: flex-end;
     border-radius: 10px;
-    overflow: hidden;
     min-height: 350px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -505,4 +510,58 @@ ul {
     font-size: 0.75rem;
     color: #e6e6e6;
     text-align: right;
+}
+
+@media (max-width: 768px) {
+    .bk-btn {
+        display: none;
+    }
+
+    .doctor-img {
+        width: 200px;
+    }
+
+    .treatment-container {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+    }
+
+    .treatment-card {
+        flex-direction: column;
+    }
+
+    .form-row {
+        flex-direction: column;
+    }
+
+    .form-input {
+        width: 75%;
+    }
+
+    .form-footer {
+        justify-content: flex-start;
+    }
+
+    .safety-cards {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        overflow-x: auto;
+        margin-left: 16px;
+        scroll-padding-left: 16px;
+    }
+
+    .footer-links {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: flex-end;
+    }
+
+    .footer-bottom {
+        text-align: center;
+    }
+
+    .navbar {
+        padding: 10px 1rem;
+    }
 }
